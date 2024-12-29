@@ -1,31 +1,29 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 const Navigation = () => {
-    const location = useLocation();
-
     return (
         <nav>
             <ul className="flex-row">
-                <li className={location.pathname === '/' ? 'active' : ''}>
-                    <Link to="/" >
-                        {capitalizeFirstLetter('about me')}
-                    </Link>
+                <li>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+                        {capitalizeFirstLetter('About')}
+                    </NavLink>
                 </li>
-                <li className={location.pathname === '/portfolio' ? 'active' : ''}>
-                    <Link to="/portfolio">
-                        {capitalizeFirstLetter('portfolio')}
-                    </Link>
+                <li>
+                    <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active' : '')}>
+                        {capitalizeFirstLetter('Portfolio')}
+                    </NavLink>
                 </li>
-                <li className={location.pathname === '/contact' ? 'active' : ''}>
-                    <Link to="/contact">
-                        {capitalizeFirstLetter('contact')}
-                    </Link>
+                <li>
+                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
+                        {capitalizeFirstLetter('Contact')}
+                    </NavLink>
                 </li>
-                <li className={location.pathname === '/resume' ? 'active' : ''}>
-                    <Link to="/resume">
-                        {capitalizeFirstLetter('resume')}
-                    </Link>
+                <li>
+                    <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active' : '')}>
+                        {capitalizeFirstLetter('Resume')}
+                    </NavLink>
                 </li>
             </ul>
         </nav>
