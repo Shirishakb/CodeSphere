@@ -1,10 +1,12 @@
+import aboutimage from '../../assets/about/aboutimage.jpg';
+
 const About = () => {
     return (
         <div className="about-section">
             <h1>About Me</h1>
             <div className="about-content">
                 <img 
-                    src="Assets\aboutimage.jpg" 
+                    src= {aboutimage}
                     alt="Developer Avatar" 
                     className="developer-photo"
                 />
