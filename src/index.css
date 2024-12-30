@@ -146,21 +146,6 @@ textarea:focus {
   box-shadow: none;
 }
 
-/* ===== Navigation Dropdown ===== */
-.dropdown-menu {
-  background-color: var(--secondary);
-  border: none;
-}
-
-.dropdown-item {
-  color: var(--light) !important;
-}
-
-.dropdown-item:hover {
-  background-color: var(--tertiary);
-  color: var(--light) !important;
-}
-
 /* ===== Cards ===== */
 .card {
   background: var(--secondary);
